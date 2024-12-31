@@ -69,4 +69,32 @@
 
     </dependencies>
 
+    <build>
+        <plugins> <!-- The Surefire plugin is used to run tests in parallel with the specified settings. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration> <!-- Specifies that tests should run in parallel at the method level -->
+                    <parallel>methods</parallel> <!-- Defines that a new JVM should be forked for each thread -->
+                    <forkMode>perthread</forkMode> <!-- Sets the number of threads to 3 -->
+                    <threadCount>3</threadCount> <!-- Specifies not to reuse JVM forks -->
+                    <reuseForks>false</reuseForks> <!-- Passes system properties to the JVM -->
+                    <argLine>-Duser.language=en</argLine> <!-- Sets the user language to English -->
+                    <argLine>-Xmx1024m</argLine> <!-- Sets the maximum heap size to 1024 MB -->
+                    <!-- Sets the maximum permanent generation space to 256 MB -->
+                    <argLine>-XX:MaxPermSize=256m</argLine>
+                    <argLine>-Dfile.encoding=UTF-8
+                    </argLine> <!-- Sets the file encoding to UTF-8 --> <!-- Specifies not to use a file to store test results -->
+                    <useFile>false</useFile> <!-- Specifies which test classes to include in the test run -->
+                    <includes>
+                        <!-- Specifies the Runner class that will be executed -->
+                        <include>Runner.java</include>
+                    </includes> <!-- Ignores test failures -->
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
