@@ -1,0 +1,32 @@
+2024-12-31 16:52:49,347 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2024-12-31 16:52:49,366 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2024-12-31 16:52:49,366 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2024-12-31 16:52:49,373 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2024-12-31 16:52:49,373 INFO o.a.j.JMeter: Version 5.6.3
+2024-12-31 16:52:49,373 INFO o.a.j.JMeter: java.version=21.0.4
+2024-12-31 16:52:49,373 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2024-12-31 16:52:49,373 INFO o.a.j.JMeter: os.name=Windows 11
+2024-12-31 16:52:49,373 INFO o.a.j.JMeter: os.arch=amd64
+2024-12-31 16:52:49,374 INFO o.a.j.JMeter: os.version=10.0
+2024-12-31 16:52:49,374 INFO o.a.j.JMeter: file.encoding=UTF-8
+2024-12-31 16:52:49,374 INFO o.a.j.JMeter: java.awt.headless=null
+2024-12-31 16:52:49,374 INFO o.a.j.JMeter: Max memory     =1073741824
+2024-12-31 16:52:49,374 INFO o.a.j.JMeter: Available Processors =20
+2024-12-31 16:52:49,380 INFO o.a.j.JMeter: Default Locale=English (EN)
+2024-12-31 16:52:49,380 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2024-12-31 16:52:49,380 INFO o.a.j.JMeter: JMeterHome=C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3
+2024-12-31 16:52:49,380 INFO o.a.j.JMeter: user.dir  =C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\bin
+2024-12-31 16:52:49,381 INFO o.a.j.JMeter: PWD       =C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\bin
+2024-12-31 16:52:49,385 INFO o.a.j.JMeter: IP: 192.168.1.138 Name: ANIL FullName: ANIL.local
+2024-12-31 16:52:49,393 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2024-12-31 16:52:49,515 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.IntelliJTheme
+2024-12-31 16:52:50,197 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\cmdrunner-2.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,200 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,260 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-cmn-jmeter-0.7.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,277 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\json-lib-2.4-jdk15.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,325 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\cmdrunner-2.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,326 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,328 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-cmn-jmeter-0.7.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,331 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Talentify\Jmeter\apache-jmeter-5.6.3\lib\ext\json-lib-2.4-jdk15.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-12-31 16:52:50,419 INFO o.j.r.JARSourceHTTP: Found cached repo
+2024-12-31 16:52:50,590 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.10, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="talentify lab" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Google Chrome&quot;;v=&quot;131&quot;, &quot;Chromium&quot;;v=&quot;131&quot;, &quot;Not_A Brand&quot;;v=&quot;24&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">bazaarstores.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <collectionProp name="DNSCacheManager.hosts"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/post-login">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">post-login</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">password</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="_token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_token</stringProp>
+                  <stringProp name="Argument.value">VcyOjdL2VQavvhdQywQ128ybbBo4lFdZISJj5Hj4</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">email</stringProp>
+                  <stringProp name="Argument.value">admin@novatechacademy.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/cdn-cgi/rum?">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">cdn-cgi/rum?</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;memory&quot;:{&quot;totalJSHeapSize&quot;:12265116,&quot;usedJSHeapSize&quot;:9814788,&quot;jsHeapSizeLimit&quot;:4294705152},&quot;resources&quot;:[],&quot;referrer&quot;:&quot;https://bazaarstores.com/login&quot;,&quot;eventType&quot;:1,&quot;firstPaint&quot;:902.5,&quot;firstContentfulPaint&quot;:902.5,&quot;startTime&quot;:1735030072817.2,&quot;versions&quot;:{&quot;fl&quot;:&quot;2024.10.5&quot;,&quot;js&quot;:&quot;2024.6.1&quot;,&quot;timings&quot;:2},&quot;pageloadId&quot;:&quot;0bda8452-6934-4cda-8f6d-9dc6453c9f40&quot;,&quot;location&quot;:&quot;https://bazaarstores.com/customer&quot;,&quot;nt&quot;:&quot;navigate&quot;,&quot;serverTimings&quot;:[{&quot;name&quot;:&quot;cfCacheStatus&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;DYNAMIC&quot;},{&quot;name&quot;:&quot;cfL4&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;?proto=TCP&amp;rtt=18560&amp;min_rtt=17559&amp;rtt_var=2857&amp;sent=13&amp;recv=15&amp;lost=0&amp;retrans=0&amp;sent_bytes=6377&amp;recv_bytes=3873&amp;delivery_rate=328971&amp;cwnd=255&amp;unsent_bytes=0&amp;cid=ccb9bea6eea828de&amp;ts=676&amp;x=0&quot;}],&quot;timingsV2&quot;:{&quot;unloadEventStart&quot;:0,&quot;unloadEventEnd&quot;:0,&quot;domInteractive&quot;:1057.3000000044703,&quot;domContentLoadedEventStart&quot;:1058.6000000014901,&quot;domContentLoadedEventEnd&quot;:1059.1000000014901,&quot;domComplete&quot;:1139.1000000014901,&quot;loadEventStart&quot;:1139.4000000059605,&quot;loadEventEnd&quot;:1139.4000000059605,&quot;type&quot;:&quot;navigate&quot;,&quot;redirectCount&quot;:1,&quot;criticalCHRestart&quot;:0,&quot;activationStart&quot;:0,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;h2&quot;,&quot;deliveryType&quot;:&quot;&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:5.9000000059604645,&quot;redirectEnd&quot;:554.2000000029802,&quot;fetchStart&quot;:554.2000000029802,&quot;domainLookupStart&quot;:554.2000000029802,&quot;domainLookupEnd&quot;:554.2000000029802,&quot;connectStart&quot;:554.2000000029802,&quot;connectEnd&quot;:554.2000000029802,&quot;secureConnectionStart&quot;:554.2000000029802,&quot;requestStart&quot;:557,&quot;responseStart&quot;:721.1000000014901,&quot;responseEnd&quot;:741.2000000029802,&quot;transferSize&quot;:4014,&quot;encodedBodySize&quot;:3714,&quot;decodedBodySize&quot;:17969,&quot;responseStatus&quot;:200,&quot;firstInterimResponseStart&quot;:0,&quot;renderBlockingStatus&quot;:&quot;non-blocking&quot;,&quot;name&quot;:&quot;https://bazaarstores.com/customer&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:1139.4000000059605},&quot;dt&quot;:&quot;&quot;,&quot;siteToken&quot;:&quot;c8dcc8293f944e4c9047c83da4c38236&quot;,&quot;st&quot;:2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/favorites">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">favorites</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">7560</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/cdn-cgi/rum?">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">cdn-cgi/rum?</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;memory&quot;:{&quot;totalJSHeapSize&quot;:13657565,&quot;usedJSHeapSize&quot;:12376801,&quot;jsHeapSizeLimit&quot;:4294705152},&quot;resources&quot;:[],&quot;referrer&quot;:&quot;https://bazaarstores.com/customer&quot;,&quot;eventType&quot;:1,&quot;firstPaint&quot;:295.69999999552965,&quot;firstContentfulPaint&quot;:295.69999999552965,&quot;startTime&quot;:1735030081523.9,&quot;versions&quot;:{&quot;fl&quot;:&quot;2024.10.5&quot;,&quot;js&quot;:&quot;2024.6.1&quot;,&quot;timings&quot;:2},&quot;pageloadId&quot;:&quot;4ecccbcb-0efa-4357-9e8e-85c02f3ac659&quot;,&quot;location&quot;:&quot;https://bazaarstores.com/favorites&quot;,&quot;nt&quot;:&quot;navigate&quot;,&quot;serverTimings&quot;:[{&quot;name&quot;:&quot;cfCacheStatus&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;DYNAMIC&quot;},{&quot;name&quot;:&quot;cfL4&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;?proto=QUIC&amp;rtt=23433&amp;min_rtt=16648&amp;rtt_var=6119&amp;sent=5251&amp;recv=641&amp;lost=432&amp;retrans=432&amp;sent_bytes=6236132&amp;recv_bytes=61178&amp;delivery_rate=147010&amp;cwnd=1419600&amp;unsent_bytes=0&amp;cid=a56cf4b5567a431a&amp;ts=8351&amp;x=1&quot;},{&quot;name&quot;:&quot;cfExtPri&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;&quot;}],&quot;timingsV2&quot;:{&quot;unloadEventStart&quot;:0,&quot;unloadEventEnd&quot;:0,&quot;domInteractive&quot;:300.8999999985099,&quot;domContentLoadedEventStart&quot;:307,&quot;domContentLoadedEventEnd&quot;:307.1000000014901,&quot;domComplete&quot;:451,&quot;loadEventStart&quot;:451.1000000014901,&quot;loadEventEnd&quot;:451.1000000014901,&quot;type&quot;:&quot;navigate&quot;,&quot;redirectCount&quot;:0,&quot;criticalCHRestart&quot;:0,&quot;activationStart&quot;:0,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;h3&quot;,&quot;deliveryType&quot;:&quot;&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:4.100000001490116,&quot;domainLookupStart&quot;:4.100000001490116,&quot;domainLookupEnd&quot;:4.100000001490116,&quot;connectStart&quot;:4.100000001490116,&quot;connectEnd&quot;:4.100000001490116,&quot;secureConnectionStart&quot;:4.100000001490116,&quot;requestStart&quot;:5.399999998509884,&quot;responseStart&quot;:218.19999999552965,&quot;responseEnd&quot;:219.89999999850988,&quot;transferSize&quot;:3547,&quot;encodedBodySize&quot;:3247,&quot;decodedBodySize&quot;:11610,&quot;responseStatus&quot;:200,&quot;firstInterimResponseStart&quot;:0,&quot;renderBlockingStatus&quot;:&quot;non-blocking&quot;,&quot;name&quot;:&quot;https://bazaarstores.com/favorites&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:451.1000000014901},&quot;dt&quot;:&quot;&quot;,&quot;siteToken&quot;:&quot;c8dcc8293f944e4c9047c83da4c38236&quot;,&quot;st&quot;:2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/cart" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">cart</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">3152</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/cdn-cgi/rum?">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">cdn-cgi/rum?</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;memory&quot;:{&quot;totalJSHeapSize&quot;:16096809,&quot;usedJSHeapSize&quot;:14533173,&quot;jsHeapSizeLimit&quot;:4294705152},&quot;resources&quot;:[],&quot;referrer&quot;:&quot;https://bazaarstores.com/favorites&quot;,&quot;eventType&quot;:1,&quot;firstPaint&quot;:246.39999999850988,&quot;firstContentfulPaint&quot;:246.39999999850988,&quot;startTime&quot;:1735030085123.4,&quot;versions&quot;:{&quot;fl&quot;:&quot;2024.10.5&quot;,&quot;js&quot;:&quot;2024.6.1&quot;,&quot;timings&quot;:2},&quot;pageloadId&quot;:&quot;c0fa2db5-c024-4312-aea7-eb8deb9f79b2&quot;,&quot;location&quot;:&quot;https://bazaarstores.com/cart&quot;,&quot;nt&quot;:&quot;navigate&quot;,&quot;serverTimings&quot;:[{&quot;name&quot;:&quot;cfCacheStatus&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;DYNAMIC&quot;},{&quot;name&quot;:&quot;cfL4&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;?proto=QUIC&amp;rtt=30195&amp;min_rtt=15990&amp;rtt_var=11187&amp;sent=8839&amp;recv=1026&amp;lost=503&amp;retrans=503&amp;sent_bytes=10504367&amp;recv_bytes=94595&amp;delivery_rate=110778&amp;cwnd=1432800&amp;unsent_bytes=0&amp;cid=a56cf4b5567a431a&amp;ts=11902&amp;x=1&quot;},{&quot;name&quot;:&quot;cfExtPri&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;&quot;}],&quot;timingsV2&quot;:{&quot;unloadEventStart&quot;:0,&quot;unloadEventEnd&quot;:0,&quot;domInteractive&quot;:277.3999999985099,&quot;domContentLoadedEventStart&quot;:277.80000000447035,&quot;domContentLoadedEventEnd&quot;:278.1000000014901,&quot;domComplete&quot;:301.6000000014901,&quot;loadEventStart&quot;:301.6000000014901,&quot;loadEventEnd&quot;:301.6000000014901,&quot;type&quot;:&quot;navigate&quot;,&quot;redirectCount&quot;:0,&quot;criticalCHRestart&quot;:0,&quot;activationStart&quot;:0,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;h3&quot;,&quot;deliveryType&quot;:&quot;&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:4.600000001490116,&quot;domainLookupStart&quot;:4.600000001490116,&quot;domainLookupEnd&quot;:4.600000001490116,&quot;connectStart&quot;:4.600000001490116,&quot;connectEnd&quot;:4.600000001490116,&quot;secureConnectionStart&quot;:4.600000001490116,&quot;requestStart&quot;:6,&quot;responseStart&quot;:169.70000000298023,&quot;responseEnd&quot;:171.39999999850988,&quot;transferSize&quot;:3332,&quot;encodedBodySize&quot;:3032,&quot;decodedBodySize&quot;:9752,&quot;responseStatus&quot;:200,&quot;firstInterimResponseStart&quot;:0,&quot;renderBlockingStatus&quot;:&quot;non-blocking&quot;,&quot;name&quot;:&quot;https://bazaarstores.com/cart&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:301.6000000014901},&quot;dt&quot;:&quot;&quot;,&quot;siteToken&quot;:&quot;c8dcc8293f944e4c9047c83da4c38236&quot;,&quot;st&quot;:2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/cart/clear">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">cart/clear</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">VcyOjdL2VQavvhdQywQ128ybbBo4lFdZISJj5Hj4</stringProp>
+                </elementProp>
+                <elementProp name="X-XSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-XSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">eyJpdiI6Ilc5SHpPYmhBOWVMQVNIQXMrNkpmb0E9PSIsInZhbHVlIjoiVk5mL1pNZDU1N0IyREJzT3RIQmlWOUcyYnVJbmg2R0QzKytxS2loQjJVTThRbnlTNldUREw0T2NFVHBMQVpNOFBEbXhoR1lPMnZ4V0VucGl6U2ZuOE9DQ2o4amxtczRwd3JJY25QYk9hYUh5SFJTVE56OVNlV3VwNnpFWWluQ2siLCJtYWMiOiJmNzE2YmNjZTY2OTQ2ZGVhMmYyODBlZDJlZjEyOWNlM2Y1NWM3OWQ4ODY1MjYzMmVjODQ5ZTNhMDQyNTZkZjBkIiwidGFnIjoiIn0=</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/customer">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">customer</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">1168</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bazaarstores.com/cdn-cgi/rum?">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">cdn-cgi/rum?</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;memory&quot;:{&quot;totalJSHeapSize&quot;:20899691,&quot;usedJSHeapSize&quot;:17651147,&quot;jsHeapSizeLimit&quot;:4294705152},&quot;resources&quot;:[],&quot;referrer&quot;:&quot;https://bazaarstores.com/cart&quot;,&quot;eventType&quot;:1,&quot;firstPaint&quot;:0,&quot;firstContentfulPaint&quot;:0,&quot;startTime&quot;:1735030088494.9,&quot;versions&quot;:{&quot;fl&quot;:&quot;2024.10.5&quot;,&quot;js&quot;:&quot;2024.6.1&quot;,&quot;timings&quot;:2},&quot;pageloadId&quot;:&quot;a6e40fff-5452-411d-a7c4-33cb0b63c0b9&quot;,&quot;location&quot;:&quot;https://bazaarstores.com/customer&quot;,&quot;nt&quot;:&quot;navigate&quot;,&quot;serverTimings&quot;:[{&quot;name&quot;:&quot;cfCacheStatus&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;DYNAMIC&quot;},{&quot;name&quot;:&quot;cfL4&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;?proto=QUIC&amp;rtt=23332&amp;min_rtt=15990&amp;rtt_var=7474&amp;sent=9317&amp;recv=1093&amp;lost=503&amp;retrans=503&amp;sent_bytes=11053835&amp;recv_bytes=111746&amp;delivery_rate=8537&amp;cwnd=1432800&amp;unsent_bytes=0&amp;cid=a56cf4b5567a431a&amp;ts=15287&amp;x=1&quot;},{&quot;name&quot;:&quot;cfExtPri&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;&quot;}],&quot;timingsV2&quot;:{&quot;unloadEventStart&quot;:0,&quot;unloadEventEnd&quot;:0,&quot;domInteractive&quot;:341.29999999701977,&quot;domContentLoadedEventStart&quot;:342,&quot;domContentLoadedEventEnd&quot;:342.5,&quot;domComplete&quot;:446,&quot;loadEventStart&quot;:446,&quot;loadEventEnd&quot;:446,&quot;type&quot;:&quot;navigate&quot;,&quot;redirectCount&quot;:0,&quot;criticalCHRestart&quot;:0,&quot;activationStart&quot;:0,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;h3&quot;,&quot;deliveryType&quot;:&quot;&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:4.699999995529652,&quot;domainLookupStart&quot;:4.699999995529652,&quot;domainLookupEnd&quot;:4.699999995529652,&quot;connectStart&quot;:4.699999995529652,&quot;connectEnd&quot;:4.699999995529652,&quot;secureConnectionStart&quot;:4.699999995529652,&quot;requestStart&quot;:5.799999997019768,&quot;responseStart&quot;:182.69999999552965,&quot;responseEnd&quot;:184.29999999701977,&quot;transferSize&quot;:3842,&quot;encodedBodySize&quot;:3542,&quot;decodedBodySize&quot;:17014,&quot;responseStatus&quot;:200,&quot;firstInterimResponseStart&quot;:0,&quot;renderBlockingStatus&quot;:&quot;non-blocking&quot;,&quot;name&quot;:&quot;https://bazaarstores.com/customer&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:446},&quot;dt&quot;:&quot;&quot;,&quot;siteToken&quot;:&quot;c8dcc8293f944e4c9047c83da4c38236&quot;,&quot;st&quot;:2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
