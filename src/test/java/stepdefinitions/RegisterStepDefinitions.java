@@ -75,9 +75,9 @@ public class RegisterStepDefinitions {
 
         //response.prettyPrint();
 
-        Object actualName = response.jsonPath().getList("findAll{it.email=='" + email + "'}.name").getFirst();
-        Object actualEmail = response.jsonPath().getList("findAll{it.email=='" + email + "'}.email").getFirst();
-        Object actualRole = response.jsonPath().getList("findAll{it.email=='" + email + "'}.role").getFirst();
+        Object actualName = response.jsonPath().getList("findAll{it.email=='" + email + "'}.name").get(0);
+        Object actualEmail = response.jsonPath().getList("findAll{it.email=='" + email + "'}.email").get(0);
+        Object actualRole = response.jsonPath().getList("findAll{it.email=='" + email + "'}.role").get(0);
 
         assertEquals(name, actualName);
         assertEquals(email, actualEmail);

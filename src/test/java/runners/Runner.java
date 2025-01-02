@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features", // Path to the feature files
         glue = "stepdefinitions",                 // Path to the step definitions package
-        tags = "@E2E",                       // Tags to specify which scenarios to run
+        tags = "@Performance",                       // Tags to specify which scenarios to run
         dryRun = false                             // Set to true to verify if all steps are defined
 )
 public class Runner {
