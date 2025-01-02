@@ -15,10 +15,10 @@ public class JMeterUtils {
 
         String projectPath = System.getProperty("user.dir");
         String reportPath = "Report_" + LocalDateTime.now().toString().replaceAll("[^0-9]", "");
-        String csvFilePath = projectPath + "\\jmeter\\" + reportPath + "\\Outputs.csv";  // JMeter output file
-        String jmeterCommand = "\"" + projectPath + "\\jmeter\\apache-jmeter-5.6.3\\bin\\jmeter.bat\""
-                + " -n -t \"" + projectPath + "\\" + JMXFile + ".jmx\""
-                + " -l \"" + csvFilePath + "\" -e -o \"" + projectPath + "\\jmeter\\" + reportPath + "\"";
+        String csvFilePath = projectPath + "/jmeter/" + reportPath + "/Outputs.csv";  // JMeter output file
+        String jmeterCommand = "\"" + projectPath + "/jmeter/apache-jmeter-5.6.3/bin/jmeter.bat\""
+                + " -n -t \"" + projectPath + "/" + JMXFile + ".jmx\""
+                + " -l \"" + csvFilePath + "\" -e -o \"" + projectPath + "/jmeter/" + reportPath + "\"";
 
         // Run the JMeter command
 
